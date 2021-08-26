@@ -1,4 +1,5 @@
 from main_menu.menu_options.static_text.menu_options_text import *
+from main_menu.menu_options.exit_game import exit_game
 
 
 def selecting_an_action_option():
@@ -36,7 +37,14 @@ def checking_the_correctness_of_the_range(is_integer):
 
 
 def go_to_the_selected_option(selected_option):
-    pass
+    if selected_option == 1:
+        # start_game()
+        pass
+    elif selected_option == 2:
+        # score_board()
+        pass
+    elif selected_option == 3:
+        exit_game()
 
 
 selecting_an_action_option()

@@ -13,3 +13,7 @@ def question_about_selected_option_txt():
 
 def wrong_range_txt():
     return ' You selected options out of range. Please try again.'
+
+
+def exit_txt():
+    return '\nGood bye!\n'
