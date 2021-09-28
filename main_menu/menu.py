@@ -1,4 +1,6 @@
-from main_menu.menu_options.static_text.menu_options_text import *
+from main_menu.menu_options.static_text.menu_options_text import \
+    game_name_txt, menu_option_txt, \
+    question_about_selected_option_txt, wrong_range_txt
 from main_menu.menu_options.exit_game import exit_game
 
 
@@ -14,8 +16,7 @@ def processing_of_external_data(input_data):
     is_integer = checking_the_correctness_of_the_selection(input_data)
 
     if is_integer or is_integer == 0:
-        have_correct_range = checking_the_correctness_of_the_range(is_integer)
-        if have_correct_range:
+        if checking_the_correctness_of_the_range(is_integer):
             return is_integer
 
 
@@ -23,7 +24,7 @@ def checking_the_correctness_of_the_selection(user_selection):
     try:
         user_selection = int(user_selection)
         return user_selection
-    except ValueError:
+    except (ValueError, TypeError):
         print(wrong_range_txt())
         return None
 
@@ -39,12 +40,10 @@ def checking_the_correctness_of_the_range(is_integer):
 def go_to_the_selected_option(selected_option):
     if selected_option == 1:
         # start_game()
-        pass
+        return 1
+
     elif selected_option == 2:
         # score_board()
-        pass
+        return 2
     elif selected_option == 3:
         exit_game()
-
-
-selecting_an_action_option()

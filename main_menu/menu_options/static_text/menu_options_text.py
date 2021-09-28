@@ -17,3 +17,13 @@ def wrong_range_txt():
 
 def exit_txt():
     return '\nGood bye!\n'
+
+
+def starting_x_o_txt(x_or_y):
+    return 'The user who selected {} starts the game.'.format(x_or_y)
+
+
+def board_txt():
+    return ''' _|_|_	1 2 3
+ _|_|_	4 5 6
+  | |	7 8 9'''
