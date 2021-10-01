@@ -1,5 +1,4 @@
-from main_menu.menu_options.static_text.start_game_text import restrict_name_is_empty_or_null
-import random
+from main_menu.menu_options.menu_options.menu_options import restrict_name_is_empty_or_null
 
 symbols_to_play = ('X', 'Y')
 
@@ -15,7 +14,6 @@ class New_match:
     @first_player.setter
     def first_player(self, data, position):
         self.__first_player[position] = data
-
 
     def set_player_name(self):
         while True:

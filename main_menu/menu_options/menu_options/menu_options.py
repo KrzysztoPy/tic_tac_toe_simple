@@ -1,15 +1,17 @@
-from main_menu.menu_options.static_text.menu_options_text import *
+from main_menu.menu_options.menu_options.menu_options_text import *
+from main_menu.menu_options.exit_game.exit_game import exit_game
 
-question_about_selected_option_txt, error_wrong_data_type_txt
-from main_menu.menu_options.start_game import New_match
-from main_menu.menu_options.exit_game import exit_game
+
+# from main_menu.menu_options.start_game import New_match
+
+
+def displaying_the_name_of_the_game():
+    print(game_name_txt())
 
 
 def selecting_an_action_option():
-    while True:
-        print(game_name_txt())
-        print(*menu_option_txt(), sep='\n')
-        input_data = input(question_about_selected_option_txt())
+    print(*menu_option_txt(), sep='\n')
+    return input(question_about_selected_option_txt())
 
 
 def data_analysis_for_compilance_with_the_guidelines(user_data):
@@ -50,4 +52,3 @@ def go_to_the_selected_option(user_selection):
         return 2
     elif user_selection == 3:
         exit_game()
-

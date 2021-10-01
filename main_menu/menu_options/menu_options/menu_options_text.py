@@ -3,7 +3,7 @@ def game_name_txt():
 
 
 def menu_option_txt():
-    menu_list = ['1. Stat menu', '2. Statistic', '3. Exit']
+    menu_list = ['1. Stat menu_options', '2. Statistic', '3. Exit']
     return menu_list
 
 
@@ -12,16 +12,12 @@ def question_about_selected_option_txt():
 
 
 def error_wrong_data_type_txt():
-    return ' Incorrect data type. You can select only digt. Please try again.'
+    return '\n Incorrect data type. You can select only digt. Please try again.\n'
 
 
 def error_wrong_range_of_selected_data():
-    return ' Incorrect data range. You can selected option from range {} to {}. Please try again.'.format(1,
-                                                                                                          menu_option_txt().__len__())
-
-
-def exit_txt():
-    return '\nGood bye!\n'
+    return '\n Incorrect data range. You can selected option from range {} to {}. Please try again. \n'.format(1,
+                                                                                                               menu_option_txt().__len__())
 
 
 def starting_x_o_txt(x_or_y):
