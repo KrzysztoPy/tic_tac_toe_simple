@@ -1,64 +1,63 @@
-from main_menu.menu import *
+from main_menu.menu_options.menu_options.menu_options import *
 from unittest.mock import patch
-from unittest.mock import Mock
 
 
-@patch('main_menu.menu.checking_the_correctness_of_the_selection')
+@patch('main_menu.menu_options.checking_the_correctness_of_the_selection')
 def test_processing_of_external_data_first_is_false(mock_checking_the_correctness_of_the_selection):
     mock_checking_the_correctness_of_the_selection.return_value = None
-    result = processing_of_external_data('mock_none')
+    result = data_analysis_for_compilance_with_the_guidelines('mock_none')
     assert result is None
 
 
-# @patch('main_menu.menu.checking_the_correctness_of_the_selection') mock_checking_the_correctness_of_the_selection
+# @patch('main_menu.menu_options.checking_the_correctness_of_the_selection') mock_checking_the_correctness_of_the_selection
 def test_processing_of_external_data_first_is_true_sec_is_false():
     # mock_checking_the_correctness_of_the_selection.return_value = 4
-    result = processing_of_external_data('4')
+    result = data_analysis_for_compilance_with_the_guidelines('0')
     assert result == None
 
 
 def test_processing_of_external_data_first_and_sec_is_true_select_opt_1():
-    result = processing_of_external_data('1')
+    result = data_analysis_for_compilance_with_the_guidelines('1')
     assert result == 1
 
 
 def test_processing_of_external_data_first_and_sec_is_true_select_opt_2():
-    result = processing_of_external_data('2')
+    result = data_analysis_for_compilance_with_the_guidelines('2')
     assert result == 2
 
 
 def test_processing_of_external_data_first_and_sec_is_true_select_opt_3():
-    result = processing_of_external_data('3')
+    result = data_analysis_for_compilance_with_the_guidelines('3')
     assert result == 3
 
 
 def test_checking_the_correctness_of_the_selection_wrong_input_data_0():
-    result = checking_the_correctness_of_the_selection('z')
+    result = check_which_user_data_is_integer('z')
     assert result is None
 
 
 def test_checking_the_correctness_of_the_selection_correct_input_data_0():
-    result = checking_the_correctness_of_the_selection('0')
+    result = check_which_user_data_is_integer('0')
     assert result is not None
 
 
 def test_checking_the_correctness_of_the_selection_correct_input_data_1():
-    result = checking_the_correctness_of_the_selection('-10')
+    result = check_which_user_data_is_integer('-10')
     assert result is not None
 
 
 def test_checking_the_correctness_of_the_selection_correct_input_data_2():
-    result = checking_the_correctness_of_the_selection('5')
+    result = check_which_user_data_is_integer('5')
     assert result is not None
 
 
 def test_checking_the_correctness_of_the_selection_correct_input_data_2():
-    result = checking_the_correctness_of_the_selection(None)
+    result = check_which_user_data_is_integer(None)
     assert result is None
 
 
 def test_checking_the_correctness_of_the_selection_correct_input_data_2():
-    result = checking_the_correctness_of_the_selection('')
+    result = check_which_user_data_is_integer('')
     assert result is None
 
 
