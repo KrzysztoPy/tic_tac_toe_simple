@@ -1,0 +1,6 @@
+from main_menu.menu import selecting_an_action_option, data_analysis_for_compilance_with_the_guidelines, \
+    go_to_the_selected_option
+
+
+selecting_an_action_option()
+go_to_the_selected_option(data_analysis_for_compilance_with_the_guidelines(user_data))
