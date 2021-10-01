@@ -1,6 +1,11 @@
-from main_menu.menu_options.menu_options.menu_options import restrict_name_is_empty_or_null
+from main_menu.main_menu.menu_options import restrict_name_is_empty_or_null
 
 symbols_to_play = ('X', 'Y')
+
+
+class Player():
+    __name = ''
+    __score = ''
 
 
 class New_match:

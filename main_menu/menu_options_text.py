@@ -3,7 +3,7 @@ def game_name_txt():
 
 
 def menu_option_txt():
-    menu_list = ['1. Stat menu_options', '2. Statistic', '3. Exit']
+    menu_list = ['1. Start', '2. Statistic', '3. Exit']
     return menu_list
 
 
@@ -28,6 +28,3 @@ def board_txt():
     return ''' _|_|_	1 2 3
  _|_|_	4 5 6
   | |	7 8 9'''
-
-
-print(error_wrong_range_of_selected_data())

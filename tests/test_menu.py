@@ -1,15 +1,15 @@
-from main_menu.menu_options.menu_options.menu_options import *
+from main_menu.main_menu.menu_options import *
 from unittest.mock import patch
 
 
-@patch('main_menu.menu_options.checking_the_correctness_of_the_selection')
+@patch('xyz.xyz.checking_the_correctness_of_the_selection')
 def test_processing_of_external_data_first_is_false(mock_checking_the_correctness_of_the_selection):
     mock_checking_the_correctness_of_the_selection.return_value = None
     result = data_analysis_for_compilance_with_the_guidelines('mock_none')
     assert result is None
 
 
-# @patch('main_menu.menu_options.checking_the_correctness_of_the_selection') mock_checking_the_correctness_of_the_selection
+# @patch('xyz.xyz.checking_the_correctness_of_the_selection') mock_checking_the_correctness_of_the_selection
 def test_processing_of_external_data_first_is_true_sec_is_false():
     # mock_checking_the_correctness_of_the_selection.return_value = 4
     result = data_analysis_for_compilance_with_the_guidelines('0')

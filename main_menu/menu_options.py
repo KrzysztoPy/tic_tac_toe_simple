@@ -1,8 +1,8 @@
-from main_menu.menu_options.menu_options.menu_options_text import *
-from main_menu.menu_options.exit_game.exit_game import exit_game
+from main_menu.menu_options_text import *
+from menu_options.exit_game.exit_game import exit_game
 
 
-# from main_menu.menu_options.start_game import New_match
+# from xyz.xyz.start_game import New_match
 
 
 def displaying_the_name_of_the_game():
